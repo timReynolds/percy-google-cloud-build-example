@@ -3,7 +3,10 @@ steps:
     args: ["install"]
   - name: "buildkite/puppeteer:v1.11.0"
     entrypoint: npm
-    args: ["run", "snapshot"]
-    env:
-      - "PERCY_BRANCH=$BRANCH_NAME"
-      - "PERCY_COMMIT=$COMMIT_SHA"
+    args: [run", "snapshot"]
+    secretEnv: ["PERCY_TOKEN"]
+    env: ["PERCY_BRANCH=$BRANCH_NAME", "PERCY_COMMIT=$COMMIT_SHA"]
+secrets:
+  - kmsKeyName: projects/infrastructure-209315/locations/global/keyRings/percy-google-cloud-build-key-ring/cryptoKeys/percy-google-cloud-build-key
+    secretEnv:
+      PERCY_TOKEN: CiQAFcp7fQWAQcloMtPzGcLLkcoNsBVq0QIwees2iyaBDRlQMCYSaQBjyJOc49B/7QnG+ic2ljggfL4LCF73MLERRXiF45Fv88siLYf/8ULDB4jda5YEtSmW1bDi2DToa3dSEUCcH7gUd9FQZpOw62tT2oEnqK4DRDMAvN9iYu2+NKqffS/7Q/1dm6AVhgfauQ==
