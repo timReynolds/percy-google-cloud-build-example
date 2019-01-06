@@ -36,7 +36,7 @@ Button.defaultProps = {
   px: 5,
   py: 3,
   color: "black",
-  bg: "#49fb35",
+  bg: "#EB975F",
   border: 0,
   borderRadius: 4
 };
