@@ -9,7 +9,7 @@ import {
   borderRadius
 } from "styled-system";
 
-const Button = styled.a`
+const Button = styled.button`
   ${space}
   ${color}
   ${fontWeight}
@@ -17,6 +17,7 @@ const Button = styled.a`
   ${borderColor}
   ${borderRadius}
   text-decoration: none;
+  display: inline-block;
 `;
 
 Button.propTypes = {
@@ -34,8 +35,8 @@ Button.defaultProps = {
   m: 0,
   px: 5,
   py: 3,
-  color: "white",
-  bg: "blue",
+  color: "black",
+  bg: "#49fb35",
   border: 0,
   borderRadius: 4
 };
