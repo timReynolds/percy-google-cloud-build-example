@@ -26,4 +26,8 @@ Heading.propTypes = {
   ...letterSpacing.propTypes
 };
 
+Heading.defaultProps = {
+  fontSize: 6
+}
+
 export default Heading;
