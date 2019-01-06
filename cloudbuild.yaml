@@ -1,0 +1,9 @@
+steps:
+  - name: "gcr.io/cloud-builders/npm"
+    args: ["install"]
+  - name: "buildkite/puppeteer:v1.11.0"
+    entrypoint: npm
+    args: ["run", "snapshot"]
+    env:
+      - "PERCY_BRANCH=$BRANCH_NAME"
+      - "PERCY_COMMIT=$COMMIT_SHA"
