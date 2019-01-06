@@ -30,7 +30,7 @@ Button.propTypes = {
 };
 
 Button.defaultProps = {
-  fontSize: "inherit",
+  fontSize: 4,
   fontWeight: "bold",
   m: 0,
   px: 5,
